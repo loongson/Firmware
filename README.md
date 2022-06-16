@@ -5,8 +5,8 @@
 LoongArch machines firmware binary repository, where you can find firmware for almost machine types, including Qemu binaries. It will become more and more complete.  
 The firewares are all based UDK2018, the boot logo is Loongson logo, EDKII style setup UI, **adapt upstream linux kernel, support EfiStub**.   
 
-### Notice  
-**There firmwares have not yet adapted to the UOS and Kylin OS current versions, we only recommend developer. Unless you are a developer or familiar for LoongArch, do not try update the firmware easily.**
+### <font color=red>Notice</font>  
+<font color=red>**There firmwares have not yet adapted to the UOS and Kylin OS current versions, we only recommend developer. Unless you are a developer or familiar for LoongArch, do not try update the firmware easily.** </font>
 
 ### Prepare to update  
 * Back up current firmware. We recommend that you need a burner, and read the contents of the SPI flash through the burner and save it.  
