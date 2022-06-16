@@ -1,5 +1,6 @@
 # EVB  
 
+[简体中文](https://github.com/loongson/Firmware/blob/main/5000Series/PC/3A5000-7A1000-EVB/README_CN.md)  
 The 3A5000-7A1000-EVB SMBIOS **Type 1** system information may be as follows:  
 ```  
 System Information
@@ -13,4 +14,4 @@ System Information
 	Family: Not Specified
 ```  
 The picture of motherboard is as follows:
-![image](https://github.com/loongson/Firmware/blob/main/Image/3A500-7A1000-EVB.jpg)
+![image](https://github.com/loongson/Firmware/blob/main/Image/3A500-7A1000-EVB.jpg)  

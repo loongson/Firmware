@@ -1,4 +1,5 @@
 # Firmware  
+[简体中文](https://github.com/loongson/Firmware/blob/main/README_CN.md)
 ### Firmware Of LoongArch Machines  
 
 LoongArch machines firmware binary repository, where you can find firmware for almost machine types, including Qemu binaries. It will become more and more complete.  

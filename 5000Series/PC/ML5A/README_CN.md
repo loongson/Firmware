@@ -1,7 +1,6 @@
 # ML5A  
 
-[简体中文](https://github.com/loongson/Firmware/blob/main/5000Series/PC/ML5A/README_CN.md)  
-The ML5A SMBIOS **Type 2** board information may be as follows:  
+ML5A SMBIOS **Type 2** 主板信息可能如下:  
 ```  
 Base Board Information
 	Manufacturer: THTF
@@ -17,5 +16,5 @@ Base Board Information
 	Type: Motherboard
 	Contained Object Handles: 0
 ```  
-The picture of motherboard is as follows:
-![image](https://github.com/loongson/Firmware/blob/main/Image/ML5A.jpg)  
+主板图片如下：
+![image](https://github.com/loongson/Firmware/blob/main/Image/ML5A.jpg)
