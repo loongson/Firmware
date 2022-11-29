@@ -22,4 +22,4 @@ The firewares are all based UDK2018, the boot logo is Loongson logo, EDKII style
 
 If you have any questions，you can connect us:  
 * Physical machines: lichao@loongson.cn && qiandongyan@loongson.cn  
-* Qemu: yangxiaojuan@loongson.cn
+* Qemu: lixianglai@loongson.cn
