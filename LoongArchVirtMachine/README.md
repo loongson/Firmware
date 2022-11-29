@@ -1,5 +1,5 @@
 # LoongArch Virtual Machine Firmware 
-[简体中文](https://github.com/loongson/Firmware/LoongArchVirtMachine/README_CN.md)
+[简体中文](README_CN.md)
 
 LoongArch virtual machine firmware is compiled based on the tianocore community source code, which is located at :  
 https://github.com/tianocore/edk2  
