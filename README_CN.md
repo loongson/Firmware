@@ -22,4 +22,4 @@ LoongArch平台固件二进制仓库，在这里可以找到尽可能多的主�
 
 如果有问题，请联系我们:
 * 物理机: lichao@loongson.cn && qiandongyan@loongson.cn  
-* 虚拟机: yangxiaojuan@loongson.cn
+* 虚拟机: lixianglai@loongson.cn
