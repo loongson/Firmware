@@ -7,7 +7,9 @@ https://github.com/tianocore/edk2-platform
 你可以自行下载、修改、编译源码,如果您想要自行编译，你可以参考:  
 https://github.com/tianocore/edk2-platforms/tree/master/Platform/Loongson/LoongArchQemuPkg/Readme.md  
 
-当然，如果您不想编译你可以直接使用当前我们编译好的虚拟机固件:edk2-loongarch64-code.fd  
+当然，如果您不想编译你可以直接使用当前我们编译好的虚拟机固件:  
+edk2-loongarch64-code.fd:UEFI代码镜像,用于UEFI的执行.  
+edk2-loongarch64-vars.fd:UEFI flash镜像,用于保存非易失变量.  
 
 ### 使用说明  
 在启动虚拟机时，通过-bios参数指定你所要使用的虚拟机固件例如：  
@@ -21,6 +23,20 @@ qemu-system-loongarch64 -m 8G -smp 4 --cpu la464 --machine virt  \
 -device usb-kbd,id=keyboard,bus=xhci.0,port=2 \
 -drive id=test,file=./archlinux.qcow2,if=none 
 ```   
+在启动虚拟机时，通过pflash指定所要使用flash镜像例如:
+```
+qemu-system-loongarch64 -m 8G -smp 4 --cpu la464 \
+-blockdev '{"driver":"file","filename":"./edk2-loongarch64-vars.fd","node-name":"libvirt-pflash0-storage","auto-read-only":false,"discard":"unmap"}'  \
+-blockdev '{"node-name":"libvirt-pflash0-format","read-only":false,"driver":"raw","file":"libvirt-pflash0-storage"}' \
+--machine virt,pflash=libvirt-pflash0-format  \
+-bios ./edk2-loongarch64-code.fd  \
+-serial stdio   \
+-device virtio-gpu-pci   \
+-device nec-usb-xhci,id=xhci,addr=0x1b \
+-device usb-tablet,id=tablet,bus=xhci.0,port=1 \
+-device usb-kbd,id=keyboard,bus=xhci.0,port=2 \
+-drive id=test,file=./archlinux.qcow2,if=none
+```  
 
 ### <font color=red>注意</font>  
 <font color=red>**本虚拟机固件暂时不适用于qemu 4.2 和 qemu 6.2， 请前往qemu官网下载最新qemu源码编译安装。**</font>  
