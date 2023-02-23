@@ -11,6 +11,7 @@ The firewares are all based UDK2018, the boot logo is Loongson logo, EDKII style
 ### Prepare to update  
 * Back up current firmware. We recommend that you need a burner, and read the contents of the SPI flash through the burner and save it.  
 * Download the firmware that matches your machine type or motherboard. The information of machine can be obtained through machine appearance, motherboard appearance or the SMBIOS type0-type3.
+* Check integrity of the downloaded firmware image against the provided `SHA256SUMS.txt` with `sha256sum` or any other equivalent tool.
 * It is better to put the new firmware into a U disk formatted as fat32.
 
 ### Update  

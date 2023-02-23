@@ -1,0 +1,2 @@
+b6f31bdbffad8896b4d7687fb803e0c8065e740f98828527164165bbf1eea1b3  edk2-loongarch64-code.fd
+adbfcb31d6470ef090220baeb53559e26323b6cfb5e7614f879e89608a3ed748  edk2-loongarch64-vars.fd
