@@ -1,0 +1,2 @@
+71cd345f9f5debb6e1f5207c07a57cf9d064e136945e213de6b31b2c1ae18eb9  UDK2018-LoongArch-EVB-pre-beta8.fd
+739ef37c249a451f4e016c67633eb845cb4ea3a8706ead72e60039d0da70e2e6  UDK2018-LoongArch-EVB-pre-beta9.fd
