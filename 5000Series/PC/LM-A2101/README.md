@@ -1,6 +1,7 @@
-# A2101  
+# LM-A2101  
 
-A2101 SMBIOS **Type 2** 主板信息可能如下:  
+[简体中文](https://github.com/loongson/Firmware/blob/main/5000Series/PC/LM-A2101/README_CN.md)  
+The LM-A2101 SMBIOS **Type 2** board information may be as follows:  
 ```  
 Handle 0x0002, DMI type 2, 15 bytes
 Base Board Information
@@ -17,5 +18,5 @@ Base Board Information
 	Type: Motherboard
 	Contained Object Handles: 0
 ```  
-主板图片如下：
-![image](https://github.com/loongson/Firmware/blob/main/Image/A2101.jpg)
+The picture of motherboard is as follows:
+![image](https://github.com/loongson/Firmware/blob/main/Image/A2101.jpg)  
