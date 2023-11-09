@@ -1,0 +1,11 @@
+Version Name: klbios-4.1.2-KL2310271-test-A2207-nologo.fd
+Commit: fe878954938896b552850fc8cd1a966583045af8
+MD5: 6c20840fd59adbc99ec1d403dcdbc4d9
+BIOS ID: KL.4.1H.LM.N.012.231027.R
+BIOS SN: 3f0d1239-2bc4-4d46-b2df-282efe927a47
+Compile Time: 20231027172743
+
+Update Description:
+1. Modify the EC-related parameters in the ACPI table to remove the parameters from the LID device.
+   Fixed the issue that the UOS system could not get the lid opening and closing event.
+2. Update the certificate to solve the problem that the online update fails to verify but does not work.
