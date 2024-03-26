@@ -1,6 +1,6 @@
 # EVB
 
-[简体中文](https://github.com/loongson/Firmware/blob/main/6000Series/PC/3A6000-7A2000-EVB/README_CN.md)
+[简体中文](README_CN.md)
 The 3A6000-7A2000-EVB SMBIOS **Type 1** system information may be as follows:
 ```
 System Information
