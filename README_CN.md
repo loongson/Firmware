@@ -18,7 +18,11 @@ LoongArch平台固件二进制仓库，在这里可以找到尽可能多的主�
 * 昆仑固件可以通过UI界面来升级；通常在“安全”页面下可以找到升级选项；找到插入的fat32格式U盘，并找到相应文件回车选择后开始升级。
 * 龙芯固件可以通过两种方式升级：
   * 第一种，通过UI界面升级，同样是在"Security"页面找到升级的入口，选择插入的U盘并且找到相应文件进行升级。
-  * 第二种，通过Shell命令行升级，在UEFI shell界面下通过"spi -u" 命令升级；如果需要更多帮助，请执行"help spi"命令获取。
+  * 第二种，通过Shell命令行升级，在UEFI shell界面下通过"spi -u FileName" 命令升级；如果需要更多帮助，请执行"help spi"命令获取。
+    * 提示: 在Shell下通过切换文件系统分区 fs0:\fs1:\fs2: ... 来查找FileName，实例参考:
+      * [步骤一](https://github.com/loongson/Firmware/blob/main/Image/spi_u_step1.png): 进去EFI Shell去查看分区;
+      * [步骤二](https://github.com/loongson/Firmware/blob/main/Image/spi_u_step2.png): 使用fs0:\fs1:\fs2: 等进入对应分区系统目录并查找烧录文件;
+      * [步骤三](https://github.com/loongson/Firmware/blob/main/Image/spi_u_step3.png): 使用命令[spi -u FileName]来更新固件;
 * **推荐使用烧录器升级，这种方式最安全**  
 
 如果有问题，请联系我们:
