@@ -18,7 +18,11 @@ The firewares are all based UDK2018, the boot logo is Loongson logo, EDKII style
 * ZD class can be update through setup UI. You can find the update item on the "Security" page, select U disk devcie you inseted, and find the new firmware to update.
 * Loongson class, there are two ways can update the firmware:  
   * The first way, update through setup UI. You can find the update item on the "Security" page, select U disk devcie you inseted, and find the new firmware to update.  
-  * The second way, you can use "spi -u" command in the EDKII shell to update, use "help spi" command for more help.
+  * The second way, you can use "spi -u FileName" command in the EDKII shell to update, use "help spi" command for more help.
+    * Tip: Switching the file system partition fs0:\fs1:\fs2: in Shell to search for FileName, refer to the instance:
+      * [Step1](https://github.com/loongson/Firmware/blob/main/Image/spi_u_step1.png): Enter EFI Shell to view partition;
+      * [Step2](https://github.com/loongson/Firmware/blob/main/Image/spi_u_step2.png): Use fs0:\fs1:\fs2 etc to enter directory and search for FileName;
+      * [Step3](https://github.com/loongson/Firmware/blob/main/Image/spi_u_step3.png): Use cmd[spi -u FileName] to update firmware;
 * **The general update method is to update through burner, this method is recommended, which is safer.**  
 
 If you have any questions，you can connect us:  
