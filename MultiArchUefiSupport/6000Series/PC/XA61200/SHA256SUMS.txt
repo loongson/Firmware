@@ -1,0 +1,1 @@
+35f3dbb87d8bb706db0397102de6b10e3ff88bf2bde6849c461f6853885ca42c  edk2_202408_LoongArch64_pc_XA61200_MultiArchSupport_rel.fd
