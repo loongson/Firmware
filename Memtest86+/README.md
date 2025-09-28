@@ -1,7 +1,7 @@
 # Memtest86+ For LoongArch
 
-Memtest86+ for LoongArch, this build is based on [memtest](https://github.com/memtest86plus/memtest86plus) commitID: 3f86696.
-This is a beta test version, it has been tested on 3A5000, 3A6000, 3C5000, 3D5000 platforms. LoongArch branch [repo](https://github.com/kilaterlee/memtest86plus/tree/SubmitLoongArch) and the [PR](https://github.com/memtest86plus/memtest86plus/pull/410). In the future, all of build will beased this PR.
+Memtest86+ for LoongArch, this build is based on [memtest](https://github.com/memtest86plus/memtest86plus) commitID: 07d84f4.
+This is a beta test version, it has been tested on 2K2000, 2K3000, 3A5000, 3A6000, 3B6000M, 3B6000, 3C5000, 3D5000, 3C6000, 3C6000/D platforms. LoongArch branch [repo](https://github.com/kilaterlee/memtest86plus/tree/SubmitLoongArch) and the [PR](https://github.com/memtest86plus/memtest86plus/pull/410). In the future, all of build will beased this PR.
 
 ### <font color=red>Notice</font>
 <font color=red>**You can not build this code now, because the binutils missed the `-b binary` option, the demo compuler will upload later, and this feature will support in next binutils version.** </font>
