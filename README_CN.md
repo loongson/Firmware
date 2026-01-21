@@ -1,11 +1,15 @@
-# 固件  
+# 固件
 
-### LoongArch平台固件    
+### 下载页面
+为了方便开发者，我们在 GitHub Pages 提供了下载索引页，方便通过机型/版本关键词进行 Web 搜索定位固件。
+- 👉 [https://loongson.github.io/Firmware/](https://loongson.github.io/Firmware/)
+该页面会在 `main` 分支有更新时由 GitHub Actions 自动部署。
 
-LoongArch平台固件二进制仓库，在这里可以找到尽可能多的主机类型，包括虚拟机二进制。我们会越来越完善该仓库。  
-所有固件均基于UDK2018版本，启动logo为龙芯logo，EDKII风格setup UI，**适配上游linux内核，支持EfiStub启动**  
+### LoongArch平台固件
+LoongArch平台固件二进制仓库，在这里可以找到尽可能多的主机类型，包括虚拟机二进制。我们会越来越完善该仓库。
+所有固件均基于EDK2版本，启动logo为龙芯logo，EDKII风格setup UI，**适配上游linux内核，支持EfiStub启动**
 
-### <font color=red>注意</font>  
+### <font color=red>注意</font>
 <font color=red>**本仓库固件暂时不适用现有版本UOS和麒麟OS系统，我们只推荐开发者或者对LoongArch架构非常熟悉的人员更新固件，否则不要轻易尝试。**</font>  
 
 ### Prepare to update  

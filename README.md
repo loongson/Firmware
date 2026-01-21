@@ -1,11 +1,17 @@
-# Firmware  
-[简体中文](https://github.com/loongson/Firmware/blob/main/README_CN.md)
-### Firmware Of LoongArch Machines  
+# Firmware
 
-LoongArch machines firmware binary repository, where you can find firmware for almost machine types, including Qemu binaries. It will become more and more complete.  
-The firewares are all based UDK2018, the boot logo is Loongson logo, EDKII style setup UI, **adapt upstream linux kernel, support EfiStub**.   
+[![简体中文](https://img.shields.io/badge/lang-中文-red.svg)](README_CN.md)
 
-### <font color=red>Notice</font>  
+### Downloads Hub
+For your convenience, GitHub Pages hosts a downloads index to make web searching for specific model/version firmware easier.
+- 👉 [https://loongson.github.io/Firmware/](https://loongson.github.io/Firmware/)
+The page is deployed automatically on pushes to `main` via GitHub Actions.
+
+### Firmware Of LoongArch Machines
+LoongArch machines firmware binary repository, where you can find firmware for almost machine types, including Qemu binaries. It will become more and more complete.
+The firewares are all based EDK2, the boot logo is Loongson logo, EDKII style setup UI, **adapt upstream linux kernel, support EfiStub**.
+
+### <font color=red>Notice</font>
 <font color=red>**There firmwares have not yet adapted to the UOS and Kylin OS current versions, we only recommend developer. Unless you are a developer or familiar for LoongArch, do not try update the firmware easily.** </font>
 
 ### Prepare to update  
