@@ -5,7 +5,6 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 from typing import Optional, Tuple, List
-
 ROOT = Path(__file__).resolve().parents[1]
 
 LINE_RE = re.compile(r'^([0-9a-fA-F]{64})\s+\*?(\S+)$')
@@ -17,15 +16,17 @@ STAGE_TOKEN_RE = re.compile(r'^(beta\d+[a-z0-9]*|prestable\d+[a-z0-9]*|stable\d+
                             re.IGNORECASE)
 
 
-def get_git_timestamp(path: Path, cache: dict) -> Optional[int]:
-    """Return last commit timestamp (unix seconds) for a file path."""
+def get_git_time(path: Path, cache: dict) -> Tuple[Optional[int], Optional[str]]:
+    """Return last author timestamp (unix seconds) and ISO time with timezone."""
     key = str(path)
     if key in cache:
         return cache[key]
     rel = path.relative_to(ROOT)
+    ts = None
+    iso = None
     try:
         result = subprocess.run(
-            ["git", "log", "-1", "--format=%ct", "--", str(rel)],
+            ["git", "log", "-1", "--format=%at|%aI", "--", str(rel)],
             cwd=ROOT,
             stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL,
@@ -33,11 +34,17 @@ def get_git_timestamp(path: Path, cache: dict) -> Optional[int]:
             check=False,
         )
         out = result.stdout.strip()
-        ts = int(out) if out.isdigit() else None
+        if out:
+            parts = out.split("|", 1)
+            if parts and parts[0].isdigit():
+                ts = int(parts[0])
+            if len(parts) > 1 and parts[1]:
+                iso = parts[1]
     except Exception:
         ts = None
-    cache[key] = ts
-    return ts
+        iso = None
+    cache[key] = (ts, iso)
+    return ts, iso
 
 
 def parse_base(filename: str) -> Optional[str]:
@@ -295,8 +302,11 @@ def main() -> None:
                     ts = 0
                     dt = None
 
-                git_ts = get_git_timestamp(file_path, git_ts_cache)
-                git_dt = datetime.fromtimestamp(git_ts).isoformat(timespec='seconds') if git_ts else None
+                git_ts, git_iso = get_git_time(file_path, git_ts_cache)
+                if git_iso:
+                    git_dt = git_iso
+                else:
+                    git_dt = datetime.fromtimestamp(git_ts).isoformat(timespec='seconds') if git_ts else None
 
                 artifacts.append(
                     {
@@ -328,6 +338,7 @@ def main() -> None:
                     }
                 )
 
+        artifacts.sort(key=sort_key, reverse=True)
         latest = []
         if artifacts:
             latest_map = {}
@@ -336,7 +347,7 @@ def main() -> None:
                 if key not in latest_map or sort_key(artifact) > sort_key(latest_map[key]):
                     latest_map[key] = artifact
             latest = list(latest_map.values())
-            latest.sort(key=lambda a: (a.get("edk") or "", a.get("board_rev") or "", a.get("build") or ""))
+            latest.sort(key=sort_key, reverse=True)
 
         machines.append(
             {
