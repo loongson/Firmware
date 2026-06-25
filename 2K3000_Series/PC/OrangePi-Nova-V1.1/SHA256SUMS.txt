@@ -1,0 +1,2 @@
+ac6f8362c98365afddf3c8533cc8caa0fa60f9482f4b4e7ebec4ae53cada1391  EDK2505_OrangePi-Nova-V1.1_V5.0.0529-stable202605_dbg.fd
+5d093f55f95f5dda2fdba0859a1dae10f46b8eb1c42668f62234737c451ca5f8  EDK2505_OrangePi-Nova-V1.1_V5.0.0529-stable202605_rel.fd
