@@ -18,4 +18,4 @@ System Information
 Add firmware for XB612B0\_V1.1, whose firmware is not compatible with those released for XB612B0\_V1.0/1.2. Firmware marked as V1.1-8 are for 8-core models, and those marked with V1.1-12 are for 12-core models.
 
 The picture of motherboard is as follows:
-![image](https://github.com/loongson/Firmware/blob/main/Image/XB612B0.jpg)
+![image](https://loongfans.cn/images/devices/loongson-xb612b0-v1.1.webp)
