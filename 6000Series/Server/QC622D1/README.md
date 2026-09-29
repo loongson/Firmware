@@ -1,4 +1,4 @@
-# TD622E0_V1.0
+# QC622D1_V1.0
 
 The QC622D1_V1.0 SMBIOS **Type 1** system information may be as follows:
 ```
