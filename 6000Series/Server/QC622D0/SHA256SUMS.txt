@@ -1,0 +1,2 @@
+daa60a39307ca2fb9c92975f5e3e784d7799dd07400493ecf129e64eb10728e7  EDK2602_QC622D0-V1.1_General_v5.0.0639-Stable202608_dbg_mainline-dvfs.fd
+0ddabf2453d0407a5a61c1bf827ea2fd722bcf8558146ed6a62ac9adb4ff37df  EDK2602_QC622D0-V1.1_General_v5.0.0639-Stable202608_rel_mainline-dvfs.fd
