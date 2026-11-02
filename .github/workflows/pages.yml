@@ -30,11 +30,16 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Generate manifest
-        run: python3 scripts/generate-manifest.py
+      - name: Test catalog rules
+        run: |
+          python3 scripts/test_manifest.py
+          python3 scripts/test_stage_web_images.py
 
-      - name: Stage web assets
-        run: cp manifest.json web/manifest.json
+      - name: Generate catalog
+        run: python3 scripts/generate-manifest.py --output web/manifest.json
+
+      - name: Stage board photos
+        run: python3 scripts/stage-web-images.py
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

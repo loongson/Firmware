@@ -1,0 +1,14 @@
+{
+  "upstream_baselines": {"EDK2602": "stable202602", "UDK2018": "UDK2018"},
+  "release_notes": [
+    {"baseline": "stable202605", "title": "V5.0.0529-stable202605", "documents": {"zh": "docs/changelist_V5.0.0529-stable202605.md"}},
+    {"baseline": "stable202602", "title": "V5.0.0431-stable202602", "documents": {"zh": "docs/changelist_V5.0.0431-stable202602.md"}},
+    {"baseline": "stable2511", "title": "V5.0.0343-stable2511", "documents": {"zh": "docs/changelist_V5.0.0343-stable2511.md"}}
+  ],
+  "machines": {
+    "LoongArchVirtMachine": {"category": "VirtualMachine"},
+    "LoongsonBackupOS": {"model": "LoongsonBackup", "category": "tool", "image_path": "Image/BACKUP-show.jpg"},
+    "Memtest86+": {"category": "tool", "upstream_url": "https://github.com/memtest86plus/memtest86plus"}
+  },
+  "artifacts": {}
+}
