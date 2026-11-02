@@ -3,6 +3,7 @@
 import importlib.util
 import json
 import os
+from datetime import datetime
 from pathlib import Path
 import subprocess
 import tempfile
@@ -198,7 +199,26 @@ class RepositoryTests(unittest.TestCase):
         os.utime(self.root / self.b, (2000000000, 2000000000))
         self.assertEqual(first, catalog.generate(self.root))
         m = self.machine(first)
-        self.assertTrue(all(a["updated_at"] == "2025-02-03T04:05:06+00:00" for a in m["artifacts"]))
+        expected = datetime.fromisoformat("2025-02-03T04:05:06+00:00")
+        for artifact in m["artifacts"]:
+            self.assertEqual(datetime.fromisoformat(artifact["updated_at"]), expected)
+
+    def test_git_utc_timestamp_spellings(self):
+        real = catalog.git
+        expected = datetime.fromisoformat("2025-02-03T04:05:06+00:00")
+        for suffix in ("+00:00", "Z"):
+            stamp = "2025-02-03T04:05:06" + suffix
+            def utc_history(root, *args):
+                result = real(root, *args)
+                if args[0] == "log":
+                    result = result.replace("2025-02-03T04:05:06+00:00", stamp)
+                    result = result.replace("2025-02-03T04:05:06Z", stamp)
+                return result
+            with self.subTest(suffix=suffix), patch.object(catalog, "git", utc_history):
+                m = self.machine(catalog.generate(self.root))
+                for artifact in m["artifacts"]:
+                    self.assertEqual(artifact["updated_at"], stamp)
+                    self.assertEqual(datetime.fromisoformat(artifact["updated_at"]), expected)
 
     def test_shallow_dates_null(self):
         real = catalog.git
